@@ -35,6 +35,9 @@ namespace ConsoleApp1
             Upper(masEven, out numberEven);
             Upper(masOdd, out numberOdd);
 
+            char compareSign = numberEven > numberOdd ? '>' : (numberEven == numberOdd ? '=' : '<');
+
+            Console.WriteLine($"numberEven {compareSign} numberOdd");
 
             ShowMas(masEven);
             ShowMas(masOdd);
@@ -49,7 +52,7 @@ namespace ConsoleApp1
             {
                 numberUpper = 0;
 
-                string[] letterUpper = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+                string[] letterUpper = { "a", "e", "i", "d", "h", "j" };
 
                 for (int i = 0; i < mas.Length; i++)
                 {
